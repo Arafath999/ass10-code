@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <Header></Header>
       <Navbar></Navbar>
       <Banner></Banner>
@@ -54,7 +54,7 @@ function App() {
     
 
 
-    </>
+    </div>
   )
 }
 

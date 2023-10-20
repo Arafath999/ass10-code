@@ -2,7 +2,7 @@
 
 const CountDown = () => {
     return (
-        <div className="">
+        <div className="mt-8 border bg-gray-400">
             <p className="text-2xl" data-aos="zoom-out">We have Care Your Choice. <span className="text-red-800 font-poppins font-bold underline">Next offer Get Start</span></p>
             <div className="flex gap-5 justify-center items-center">
                 <div>
