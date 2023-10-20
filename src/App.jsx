@@ -4,10 +4,13 @@ import './App.css'
 import Banner from './Components/Banner'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
-import HomeText from './Components/HomeText'
+
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Components/Header'
+import SimpleMap from './Components/GoogleMaps'
+import CountDown from './Components/CountDown'
+import Buying from './Components/Buying'
 
 function App() {
 
@@ -27,6 +30,7 @@ function App() {
       <Header></Header>
       <Navbar></Navbar>
       <Banner></Banner>
+      <CountDown></CountDown>
       <h1 className="text-center font-poppins font-bold text-3xl text-red-600 mt-6">All Brand</h1>
 
       <div className='mb-6 grid grid-cols-1 md:grid-cols-2 space-y-2'>
@@ -43,7 +47,10 @@ function App() {
         ))}
         
       </div>
+      <SimpleMap></SimpleMap>
+      <Buying></Buying>
       <Footer></Footer>
+      
     
 
 
