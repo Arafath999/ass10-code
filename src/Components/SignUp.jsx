@@ -3,6 +3,7 @@ import { AuthContext } from "./Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { GoogleAuthProvider } from "firebase/auth";
+import swal from 'sweetalert';
 const provider = new GoogleAuthProvider();
 
 const SignUp = () => {
@@ -28,6 +29,15 @@ const SignUp = () => {
         const image = form.image.value;
         const email = form.email.value;
         const password = form.password.value;
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        if (!passwordPattern.test(password)) {
+            swal("Password must contain at least 8 characters, including letters and numbers.");
+            return; 
+        }
+
+
+
         createUser(email,password)
         .then(result => {
             console.log(result.user)
@@ -45,7 +55,7 @@ const SignUp = () => {
       .then(data => {
         console.log(data)
         if(data.insertedId ){
-            alert('added successfully')
+            swal('added successfully')
         }
       })
         })
