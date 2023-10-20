@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "./Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-
+import swal from 'sweetalert';
 
 const SignIn = () => {
 
@@ -26,6 +26,17 @@ const SignIn = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password)
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        if (!passwordPattern.test(password)) {
+            swal("Password must contain at least 8 characters, including letters and numbers.");
+            return; 
+        }
+
+
+
+
+
         signInUser(email,password)
         .then(res => {
             console.log(res.user)
@@ -44,7 +55,7 @@ const SignIn = () => {
 
              if(data.acknowledged
             ){
-            alert('added successfully')
+            swal('added successfully')
         }
       })
         })
