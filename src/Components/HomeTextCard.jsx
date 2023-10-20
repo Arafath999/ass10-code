@@ -11,9 +11,9 @@ const HomeTextCard = ({ brand }) => {
     return (
         <div className="">
 
-            <div className="card space-y-8 w-96 bg-base-100 shadow-xl">
+            <div className="card space-y-8 w-96 bg-base-100 h-[200vh] shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src={photo} alt="Shoes" className="rounded-xl" />
+                    <img src={photo} alt="Shoes"  className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>

@@ -29,7 +29,7 @@ function App() {
       <Banner></Banner>
       <h1 className="text-center font-poppins font-bold text-3xl text-red-600 mt-6">All Brand</h1>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 space-y-2'>
+      <div className='mb-6 grid grid-cols-1 md:grid-cols-2 space-y-2'>
         {brands.map((brand) => (
           <Link to={`/homeText/?category=${brand.brandName}`} key={brand.id}><div className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={brand.imageURL} alt="Shoes" /></figure>
@@ -43,12 +43,8 @@ function App() {
         ))}
         
       </div>
-      
-      
-
-
-
       <Footer></Footer>
+    
 
 
     </>
