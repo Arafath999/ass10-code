@@ -1,0 +1,33 @@
+[
+    {"id":1,
+      "brandName": "Toyota",
+      "imageURL": "https://i.ibb.co/sC2ZfMp/pexels-erik-mclean-17507722.jpg"
+    },
+    {
+      "id": 2,
+      "brandName": "FROD",
+      "imageURL": "https://i.ibb.co/FJTPgkc/pexels-mike-bird-1007410.jpg"
+    },
+    {
+      "id": 3,
+      "brandName": "BMW",
+      "imageURL": "https://i.ibb.co/R2wgFjt/pexels-mike-bird-170811.jpg"
+    },
+    {
+      "id": 4,
+      "brandName": "Mercedes-Benz",
+      "imageURL": "https://i.ibb.co/RYs5qfb/pexels-ishan-kulshrestha-8622817.jpg"
+    },
+    {
+      "id": 5,
+      "brandName": "Tesla",
+      "imageURL": "https://i.ibb.co/0yFb23f/pexels-craig-adderley-2449452.jpg"
+    },
+    {
+      "id": 6,
+      "brandName": "Honda",
+      "imageURL": "https://i.ibb.co/P4LYxVN/pexels-sebastian-pichard-6894420.jpg"
+    }
+  ]
+  
+  
