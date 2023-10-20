@@ -9,9 +9,9 @@ const HomeTextCard = ({ brand }) => {
     //      console.log(updatedCars)
 
     return (
-        <div>
+        <div className="">
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card space-y-8 w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={photo} alt="Shoes" className="rounded-xl" />
                 </figure>

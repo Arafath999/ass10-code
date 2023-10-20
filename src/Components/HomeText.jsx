@@ -19,10 +19,12 @@ const HomeText = () => {
         <div>
             <Navbar></Navbar>
             <Slider></Slider>
-            <h2 className="text-2xl">card show{cars.length}</h2>
+            <h2 className="text-2xl">PRODUCT</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 space-y-2">
             {
                 cars.map(brand => <HomeTextCard key={brand._id} brand={brand}></HomeTextCard>)
             }
+            </div>
         </div>
     );
 };
