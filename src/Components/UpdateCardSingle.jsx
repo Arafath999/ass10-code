@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 
+
 const UpdateCardSingle = () => {
     const brand = useLoaderData();
     const { _id, name, type, price,brand:brandName, rating, description, photo } = brand;
@@ -30,6 +31,7 @@ const UpdateCardSingle = () => {
         .then(res => res.json())
         .then(data => {
            console.log(data)
+        
         })
     }
     return (

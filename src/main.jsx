@@ -16,12 +16,12 @@ import SignUp from './Components/SignUp.jsx';
 import SignIn from './Components/SignIn.jsx';
 import AuthProvider from './Components/Providers/AuthProvider.jsx';
 import PrivateRoute from './Components/PrivateRoute.jsx';
+import ErrorPage from './Components/ErrorPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
   },
-  
   {
     path: "/homeText",
     element: <HomeText></HomeText>,
@@ -50,7 +50,11 @@ const router = createBrowserRouter([
   {
     path: "signin",
     element: <SignIn></SignIn>
-  }
+  },
+  {
+    path: "error", 
+    element: <ErrorPage />,
+  },
 ]);
 
 
