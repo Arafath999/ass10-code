@@ -10,7 +10,7 @@ const Banner = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold text-gray-800"><span className="text-red-800">SPECIAL Automotive </span></h1>
-                        <p className="mb-5 text-white">Event management is the process of creating and maintaining an event. This process spans from the very beginning of planning all the way to post-event strategizing. At the start, an event manager makes planning decisions, such as the time, location, and theme of their event</p>
+                        <p className="mb-5 text-white">A car is a vehicle that has wheels, carries a small number of passengers, and is moved by an engine or a motor. Cars are also called automobiles or motor vehicles. Trucks and buses are motor vehicles as well. However, trucks and buses are larger than cars, and they carry heavier loads.</p>
                     </div>
                 </div>
 
