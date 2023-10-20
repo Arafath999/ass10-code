@@ -1,11 +1,11 @@
 // ErrorPage.jsx
 
 
-const ErrorPage = ({ message }) => {
+const ErrorPage = () => {
   return (
     <div>
       <h2>Error</h2>
-      <p>{message}</p>
+      <p>404 not found</p>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import DetailsPage from "./DetailsPage";
 
 
 const HomeTextCard = ({ brand }) => {
@@ -40,4 +39,4 @@ const HomeTextCard = ({ brand }) => {
     );
 };
 
-export default HomeTextCard;
+export default HomeTextCard

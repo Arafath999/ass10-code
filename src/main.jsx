@@ -17,31 +17,41 @@ import SignIn from './Components/SignIn.jsx';
 import AuthProvider from './Components/Providers/AuthProvider.jsx';
 import PrivateRoute from './Components/PrivateRoute.jsx';
 import ErrorPage from './Components/ErrorPage.jsx';
+
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>
   },
   {
     path: "/homeText",
     element: <HomeText></HomeText>,
+    errorElement:<ErrorPage></ErrorPage>
   },
   {
     path: "/details/:id",
-    element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>
+    element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
+    errorElement:<ErrorPage></ErrorPage>,
+    loader: ({params}) => fetch(`http://localhost:5000/carts/${params.id}`)
+
   },
   {
     path: "/mycart",
-    element: <MyCard></MyCard>
+    element: <MyCard></MyCard>,
+    errorElement:<ErrorPage></ErrorPage>
   },
   {
     path: "/updatecard",
-    element: <UpdateCard></UpdateCard>
+    element: <UpdateCard></UpdateCard>,
+    errorElement:<ErrorPage></ErrorPage>
   },
   {
     path: "/updatecard/:id",
     element: <UpdateCardSingle></UpdateCardSingle>,
-    loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
+    errorElement:<ErrorPage></ErrorPage>
+    // loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
   },
   {
     path: "signup",
@@ -51,10 +61,10 @@ const router = createBrowserRouter([
     path: "signin",
     element: <SignIn></SignIn>
   },
-  {
-    path: "error", 
-    element: <ErrorPage />,
-  },
+  // {
+  //   path: "error/:message", 
+  //   element: <ErrorPage />,
+  // },
 ]);
 
 
