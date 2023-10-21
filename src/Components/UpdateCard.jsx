@@ -17,7 +17,7 @@ const UpdateCard = () => {
          const updatedCars = {name,brand,type,price,rating,description,photo}
          console.log(updatedCars)
 
-         fetch(`http://localhost:5000/brands`,{
+         fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands`,{
             method:"POST",
             headers: {
                 'content-type' : 'application/json'
