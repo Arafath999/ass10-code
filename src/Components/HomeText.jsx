@@ -10,7 +10,7 @@ const HomeText = () => {
       const category = searchParams.get('category');
   useEffect(() => {
     // Fetch the data when the component mounts
-    fetch(`http://localhost:5000/brands?category=${category}`)
+    fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands?category=${category}`)
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error(error));

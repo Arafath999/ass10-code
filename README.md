@@ -50,8 +50,13 @@ If the password doesn't meet the pattern, a warning message is displayed using s
 Server Interaction:
 
 After a successful sign-in, the user's email is extracted from the form data.
-+ A PATCH request is made to the server at http://localhost:5000/user to update user information. This is typically used to record the user's activity or log them in on the server-side.
++ A PATCH request is made to the server at https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user to update user information. This is typically used to record the user's activity or log them in on the server-side.
 If the server acknowledges the update, a success message is displayed using swal.
 Navigation:
 
 After a successful sign-in or Google sign-in, the user is redirected to the previous page they were on (if any), or the home page.
+
+
+firebase deploy:https://ass-10-c7f25.web.app
+https://ass-10-c7f25.web.app
+https://ass-10-c7f25.web.app

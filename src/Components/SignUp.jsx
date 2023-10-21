@@ -44,7 +44,7 @@ const SignUp = () => {
             navigation(location?.state ? location.state : '/signin');
             handleProfile(name,image)
             const user = { email}
-            fetch(`http://localhost:5000/user`,{
+            fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user`,{
         method: "POST",
         headers :{
           'content-type' : 'application/json'

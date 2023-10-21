@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     path: "/details/:id",
     element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
     errorElement:<ErrorPage></ErrorPage>,
-    loader: ({params}) => fetch(`http://localhost:5000/carts/${params.id}`)
+    loader: ({params}) => fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands/${params.id}`)
 
   },
   {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     path: "/updatecard/:id",
     element: <UpdateCardSingle></UpdateCardSingle>,
     errorElement:<ErrorPage></ErrorPage>
-    // loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
+    // loader: ({params}) => fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands/${params.id}`)
   },
   {
     path: "signup",

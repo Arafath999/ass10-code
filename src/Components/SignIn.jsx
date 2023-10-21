@@ -42,7 +42,7 @@ const SignIn = () => {
             console.log(res.user)
             navigate(location?.state ? location.state : '/');
             const user = { email}
-            fetch(`http://localhost:5000/user`,{
+            fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user`,{
                 method: "PATCH",
                 headers: {
                     'content-type' : 'application/json'
@@ -128,7 +128,7 @@ export default SignIn;
 //             navigate(location.state?.from || '/');
 
 //             const user = { email };
-//             const response = await fetch(`http://localhost:5000/user`, {
+//             const response = await fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user`, {
 //                 method: "PATCH",
 //                 headers: {
 //                     'content-type': 'application/json'
