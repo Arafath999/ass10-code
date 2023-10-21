@@ -50,8 +50,8 @@ const router = createBrowserRouter([
   {
     path: "/updatecard/:id",
     element: <UpdateCardSingle></UpdateCardSingle>,
-    errorElement:<ErrorPage></ErrorPage>
-    // loader: ({params}) => fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands/${params.id}`)
+    errorElement:<ErrorPage></ErrorPage>,
+    loader: ({params}) => fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/brands/${params.id}`)
   },
   {
     path: "signup",
