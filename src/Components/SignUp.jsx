@@ -8,7 +8,7 @@ const provider = new GoogleAuthProvider();
 
 const SignUp = () => {
 
-    const {createUser,handleProfile,googleSignIn} = useContext(AuthContext)
+    const {createUser,googleSignIn} = useContext(AuthContext)
 
     const navigation = useNavigate();
  
@@ -25,11 +25,15 @@ const SignUp = () => {
     const handleSignUp = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value;
-        const image = form.image.value;
+        // const name = form.name.value;
+        // const image = form.image.value;
         const email = form.email.value;
         const password = form.password.value;
+        
         const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        
+
+
 
         if (!passwordPattern.test(password)) {
             swal("Password must contain at least 8 characters, including letters and numbers.");
@@ -42,7 +46,7 @@ const SignUp = () => {
         .then(result => {
             console.log(result.user)
             navigation(location?.state ? location.state : '/signin');
-            handleProfile(name,image)
+            // handleProfile(name,image)
             const user = { email}
             fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user`,{
         method: "POST",
@@ -67,11 +71,11 @@ const SignUp = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h2>it is sign up</h2>
+            
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Sign Up</h1>
+      <h1 className="text-5xl font-bold">SignUP</h1>
      
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

@@ -70,7 +70,7 @@ const SignIn = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Sign Up</h1>
+                        <h1 className="text-5xl font-bold">SignIn</h1>
 
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -104,82 +104,5 @@ const SignIn = () => {
 };
 
 export default SignIn;
-// import { useContext } from "react";
-// import { AuthContext } from "./Providers/AuthProvider";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import Navbar from "./Navbar";
 
-// const SignIn = () => {
-//     const { signInUser } = useContext(AuthContext);
-//     const location = useLocation();
-//     const navigate = useNavigate();
 
-//     const handleSignIn = async (e) => {
-//         e.preventDefault();
-//         const form = e.target;
-//         const email = form.email.value;
-//         const password = form.password.value;
-
-//         try {
-//             const res = await signInUser(email, password);
-//             console.log(res.user);
-
-//             // Redirect the user to the previous page (or the home page if there's no previous page)
-//             navigate(location.state?.from || '/');
-
-//             const user = { email };
-//             const response = await fetch(`https://khan-m5rxu3e0t-khans-projects-8df7d1cb.vercel.app/user`, {
-//                 method: "PATCH",
-//                 headers: {
-//                     'content-type': 'application/json'
-//                 },
-//                 body: JSON.stringify(user)
-//             });
-
-//             const data = await response.json();
-//             console.log(data);
-
-//             if (data.acknowledged) {
-//                 alert('added successfully');
-//             }
-//         } catch (error) {
-//             console.error(error);
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h2>Sign In</h2>
-//             <Navbar />
-//             <div className="hero min-h-screen bg-base-200">
-//                 <div className="hero-content flex-col lg:flex-row-reverse">
-//                     <div className="text-center lg:text-left">
-//                         <h1 className="text-5xl font-bold">Sign IN</h1>
-//                     </div>
-//                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-//                         <form onSubmit={handleSignIn} className="card-body">
-//                             <div className="form-control">
-//                                 <label className="label">
-//                                     <span className="label-text">Email</span>
-//                                 </label>
-//                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
-//                             </div>
-//                             <div className="form-control">
-//                                 <label className="label">
-//                                     <span className="label-text">Password</span>
-//                                 </label>
-//                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-//                             </div>
-//                             <div className="form-control mt-6">
-//                                 <button className="btn btn-primary">Sign In</button>
-//                                 <Link to='/signup'><button className="btn btn-primary">Sign up</button></Link>
-//                             </div>
-//                         </form>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default SignIn;

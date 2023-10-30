@@ -5,6 +5,7 @@ import { AuthContext } from "./Providers/AuthProvider";
 
 const Navbar = () => {
 
+ 
 
   const navLinks = <>
     <li><NavLink to='/'>HOME</NavLink></li>
@@ -50,11 +51,18 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
+        
+
         <div className="navbar-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
 
             {
-              user && <p className="text-red-800 mr-16">{user?.email}</p>
+              user && <p className="text-red-800 mr-16 -mt-6">{user?.email} {user?.displayName}</p>
+            }
+            {
+              user && <div className="w-10 rounded-full -mt-4">
+              <img src={user.photoURL} />
+            </div>
             }
           </label>
           {

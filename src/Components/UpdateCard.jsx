@@ -32,7 +32,7 @@ const UpdateCard = () => {
     return (
         <div>
             <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-2xl font-bold">update Cars Name:{name}</h2>
+           
             <form onSubmit={(handleAddCars)}>
                 {/* name and available quantity */}
                 <div className="md:flex">

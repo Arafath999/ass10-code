@@ -15,6 +15,7 @@ const HomeText = () => {
       .then((data) => setCars(data))
       .catch((error) => console.error(error));
   }, []);
+  
     return (
         <div>
             <Navbar></Navbar>
